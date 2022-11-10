@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window size="300,300" roundcorner="0,0" bktrans="1">
+	<Font name="微软雅黑" size="13" bold="false"/>
+	<Font name="微软雅黑" size="12"/>
+			
+	<VerticalLayout  name="ver_frame" bkimage="file='png/menu_bk2.png' corner='15,8,15,8'"  bordercolor="0xffb6bccc" >
+		<List name="menulist" header="hidden"   itemhotbkcolor="#FF2690D5" itemdisabledbkcolor="#FFF8F9FB" itemtextpadding="10,0,0,0" itemtextcolor="#FF37393A" itemhottextcolor="#FFEFF8FD" itemselectedtextcolor="#FFEFF8FD" >
+		</List>
+	</VerticalLayout>
+	
+</Window>

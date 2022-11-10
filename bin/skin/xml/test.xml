@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="800,600" caption="0,0,0,50" >
+
+		<Font name="微软雅黑" size="12" default="true" /> <!--0-->
+		<Font name="微软雅黑" size="14" default="false" /> <!--1-->
+		<Font name="微软雅黑" size="16" default="false" />  <!--2-->
+		<Font name="微软雅黑" size="18" default="false" />  <!--3-->
+		<Font name="微软雅黑" size="30" default="false" bold="true" /> <!--4-->
+
+		<VerticalLayout bkcolor="0xfffef0e">
+			<HorizontalLayout height="50">
+				<Button name="close_btn" bkcolor="0xffff0000" padding="750,5,0,0" width="30" height="30" text="关闭" />
+			</HorizontalLayout>	
+
+			
+		</VerticalLayout>
+</Window>

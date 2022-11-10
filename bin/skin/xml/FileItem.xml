@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="1260,750" caption="0,0,0,50" roundcorner="20,20" alpha="225" showshadow="true" >
+
+	<Font name="微软雅黑" size="12" default="true"/> 
+	<Font name="微软雅黑" size="14"/>
+	<Font name="微软雅黑" size="16"/> 
+	<Font name="微软雅黑" size="18"/> 
+
+	<ListContainerElementEx   height="25" >
+		<HorizontalLayout width="600" height="25" padding="0,6,0,0" >
+				<FileIcon name="icon" width="16" height="16" bkimage="png/unknow_file.jpg"/>
+				<Text name="file_name_text" padding="5,2,0,0" autocalcwidth="true" />
+		</HorizontalLayout>
+
+		<HorizontalLayout width="200" height="25" padding="0,6,0,0">
+			<Text name="file_size_text" width="200" align="right" />
+		</HorizontalLayout>
+
+		<HorizontalLayout width="200" height="25" padding="0,6,0,0">
+				<Text name="file_type_text" width="200" align="right" />
+		</HorizontalLayout>
+
+
+		<HorizontalLayout width="200" height="25" padding="0,6,0,0">
+				<Text name="file_last_tm_text" width="200" align="right"/>
+		</HorizontalLayout>
+	</ListContainerElementEx>
+
+</Window>

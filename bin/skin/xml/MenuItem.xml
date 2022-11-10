@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="1260,750" caption="0,0,0,0" roundcorner="10,10">
+	<ListContainerElement width="300" height="25" bkcolor="0xffffffff">
+		<HorizontalLayout padding="20,0,0,0" width="350" height="25" >
+			<Label  name="item_text" text="这是测试文本" autocalcwidth="true"/>
+			<Label  name="hotkey_or_icon_label" float="true" pos="230,5,300,22"   text="asdasdsad"  />
+		</HorizontalLayout>
+	</ListContainerElement>
+</Window>

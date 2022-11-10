@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="325,265" caption="0,0,0,25" roundcorner="5,5"  gdiplustext="true" textrenderinghint="3"  >
+		<Font name="微软雅黑" size="16" default="true"/> 
+		<Font name="微软雅黑" size="14" /> 
+	<VerticalLayout bkcolor="0xffadc2d4" height="250"   borderround="5,5" bordersize="1" bordercolor="0xff1d242a">
+
+		<HorizontalLayout name="top_tile_layer"   height="30">
+			<Label name="compress_icon_label"  width="16" height="16" padding="5,8,0,0" bkimage="png/tray_icon.ico"/>
+			<Label name="dest_file_name_text" width="175" height="16"  endellipsis="true" text="desk.rar"  padding="5,10,0,0"/>
+			<HorizontalLayout  float="true" pos="205,-28,0,0"  width="105" height="20"  leftbordersize="1" rightbordersize="1" bottombordersize="1" topbordersize="0" bordercolor="0xff485056">
+				<Button  name="min_btn" 	width="30" height="15" />
+				<Button  name="max_btn"    	width="30" height="15" />
+				<Button	 name="close_btn" 	width="30" height="15" />
+			</HorizontalLayout>
+		</HorizontalLayout>	
+
+		<VerticalLayout  bkcolor="0xffadc2d4" padding="1,0,0,0" width="323" >
+			<VerticalLayout padding="10,0,0,0" width="305" bkcolor="0xfff0f0f0" height="230"  bordersize="1" bordercolor="0xff586674">
+				<VerticalLayout width="280" height="65"  padding="13,8,0,0" borderround="8,8" bordersize="1" bordercolor="0xffd5dfe5">
+					<Text name="compress_file_path_text" height="15" text="压缩文件 desk.rar" padding="0,2,0,0"/>
+					<Text name="state_text"  height="15" text="正在压缩" endellipsis="true"/>
+					
+					<VerticalLayout >
+						<HorizontalLayout height="16" >
+							<Text name="cur_file_name" text="read.txt" width="253"  height="16" endellipsis="true"/>
+							<Text name="cur_progress_text"  padding="0,0,0,0" text="0%" />
+						</HorizontalLayout>
+
+						<CProgressEx name="cur_progress_" width="275" padding="2,0,0,0"  value="0" height="10" borderround="5,5" bordersize="1" bordercolor="0xffb2b2b2" bkimage="png/progress_bk.png" foreimage="png/progress_fk.png" />
+					</VerticalLayout>
+				</VerticalLayout>
+
+				<VerticalLayout width="280" height="93" childpadding="1" padding="13,5,0,0" borderround="8,8" bordersize="1" bordercolor="0xffd5dfe5">
+					<HorizontalLayout height="15" padding="0,2,0,0">
+						<Text text="已用时间" height="15" width="225"/>
+						<Text name="connetime_text" padding="2,0,0,0" text="00:00:00"/>
+					</HorizontalLayout>
+
+					<HorizontalLayout height="15" padding="0,2,0,0">
+						<Text name="surplus_text_time" text="剩余时间" height="15" width="225"/>
+						<Text name="surplus_time" padding="2,0,0,0" text="00:00:00"/>
+					</HorizontalLayout>
+
+
+					<Label width="276" height="2" padding="2,3,0,0" bkcolor="0xffa0a0a0"/>
+					
+					<VerticalLayout>
+						<HorizontalLayout height="16" padding="0,4,0,0">
+							<Text name ="compre_ration_title_text" text="压缩率" width="253" auendellipsis="true"/>
+							<Text name="compress_ration_text" padding="0,0,0,0" text="45%" />
+						</HorizontalLayout>
+
+						<HorizontalLayout height="18" >
+							<Text text="进度" width="253" auendellipsis="true"/>
+							<Text name="total_progress_text" padding="0,0,0,0" text="0%" />
+						</HorizontalLayout>
+
+						<Progress name="total_progress" width="275" padding="2,0,0,0" height="10" value="0" borderround="5,5" bordersize="1" bordercolor="0xffb2b2b2" min="0" max="100" bkimage="png/progress_bk.png" foreimage="png/progress_fk.png" />
+					</VerticalLayout>
+				</VerticalLayout>
+
+				<VerticalLayout width="285" height="50" childpadding="5" padding="13,7,0,0">
+					<HorizontalLayout childpadding="10" height="20" >
+						<Option name="back_run_btn" group="compresswnd_btn" pushedbkcolor="0xffbce5fc" hotbkcolor="0xffe8f6fd" focusbordercolor="0xff3c7fb1"  align="center" bordercolor="0xff707070" bordersize="1" width="135" height="20" text="后台(B)" borderround="5,5"/>
+						<Option name="pause_btn"    group="compresswnd_btn" pushedbkcolor="0xffbce5fc" hotbkcolor="0xffe8f6fd" focusbordercolor="0xff3c7fb1" align="center" bordercolor="0xff707070" bordersize="1" width="135" height="20" text="暂停(P)" borderround="5,5"/>
+					</HorizontalLayout>
+
+					<HorizontalLayout childpadding="5" height="20" >
+						<Option name="cancle_btn"   group="compresswnd_btn" pushedbkcolor="0xffbce5ff" hotbkcolor="0xffe8f6fd" focusbordercolor="0xff3c7fb1" align="center" bordercolor="0xff707070" bordersize="1" width="135" height="20" text="取消"  borderround="5,5"/>
+						<Option name="mode_change_btn"  group="compresswnd_btn" pushedbkcolor="0xffbce5fc" hotbkcolor="0xffe8f6fd" focusbordercolor="0xff3c7fb1" padding="5,0,0,0"  enable="false" mouse="false" align="left" bordercolor="0xff707070" bordersize="1" textpadding="2,3,0,0" width="65" height="20" text="模式(M)..." textcolor="0xffb2b2b2"  borderround="5,5"/>
+						<Option name="help_btn"    group="compresswnd_btn" pushedbkcolor="0xffbce5fc" hotbkcolor="0xffe8f6fd" focusbordercolor="0xff3c7fb1" align="center" bordercolor="0xff707070" bordersize="1" width="65" height="20" text="帮助"  borderround="5,5"/>
+					</HorizontalLayout>
+				</VerticalLayout>
+			</VerticalLayout>
+
+		</VerticalLayout>
+
+
+	</VerticalLayout>
+</Window>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="1260,760" mininfo="1260,760" maxinfo="1260,760" caption="0,0,0,50" roundcorner="20,20" alpha="225" showshadow="true" >
+	<Font name="微软雅黑" size="12" default="true"/> 
+	<Font name="微软雅黑" size="14"/>
+	<Font name="微软雅黑" size="16"/> 
+	<Font name="微软雅黑" size="18"/> 
+
+	<VerticalLayout bkcolor="0xffffffff" >
+		<HorizontalLayout height="30" >
+			<Label name="top_title_label" padding="30,0,0,0" width="1150" text="这是测试.rar"/>
+			<HorizontalLayout width="150" padding="10,3,0,0">
+				<Button name="hide_btn" width="11" height="11"  tooltip="隐藏"  bkimage="png/btn_hide.png"/>
+				<Button name="close_btn"  padding="15,0,0,0" width="11" height="11" tooltip="关闭" normalimage="file='png/btn_exit.png' source='0,0,11,11'"hotimage="file='png/btn_exit.png' source='11,0,22,11'" pushedimage="file='png/btn_exit.png' source='22,0,33,11'"/>
+			</HorizontalLayout>
+		</HorizontalLayout>
+		
+		<HorizontalLayout name="menu_layout" height="20"   childpadding="10" bkcolor="0xffbec4d5">
+			<MenuBtn name="menu_file_btn"  padding="15,1,0,0" width="50" height="18" text="文件"  />
+			<MenuBtn name="menu_command_btn"  padding="0,1,0,0" width="50" height="18"  text="命令"/>
+			<MenuBtn name="menu_tool_btn"  padding="0,1,0,0" width="50" height="18"	 text="工具"/>
+			<MenuBtn name="menu_same_btn"  padding="0,1,0,0" width="50" height="18" text="收藏夹"/>
+			<MenuBtn name="menu_select_btn"  padding="0,1,0,0" width="50" height="18"  text="选项"/>
+			<MenuBtn name="menu_help_btn"  padding="0,1,0,0" width="50" height="18"   text="帮助"/>
+		</HorizontalLayout>
+
+
+		<HorizontalLayout name="rar_change_layout"  height="80"   childpadding="15" bkcolor="0xffd3daed" >
+			<VerticalLayout width="62" height="80" padding="30,4,0,0" childpadding="3">
+				<CButtonLabel  name="add_btn" focusbordercolor="0xff9398b5" padding="1,0,0,0" borderround="5,5" bordercolor="0xff9398a5"  width="60" height="60" bkimage="png/png/a1.png" />
+				<Text  align="center" text="添加" />
+			</VerticalLayout>
+
+			<VerticalLayout width="62" height="80" childpadding="3" padding="0,4,0,0">
+				<CButtonLabel  name="unzip_btn" focusbordercolor="0xff9398b5" padding="1,0,0,0" borderround="5,5" bordercolor="0xff9398a5" width="60" height="60" bkimage="png/png/a3.png"/>
+				<Text   text="解压到"  align="center" />
+			</VerticalLayout>
+
+			<VerticalLayout width="62" height="80" childpadding="3" padding="0,4,0,0">
+				<CButtonLabel  name="view_btn" focusbordercolor="0xff9398b5" padding="1,0,0,0" borderround="5,5" bordercolor="0xff9398a5"  width="60" height="60" bkimage="png/png/a17.png"/>
+				<Text  align="center" text="查看"  />
+			</VerticalLayout>
+
+			<VerticalLayout width="62" height="80" childpadding="3" padding="0,4,0,0">
+				<CButtonLabel  name="del_btn" focusbordercolor="0xff9398b5" padding="1,0,0,0" borderround="5,5" bordercolor="0xff9398a5"  width="60" height="60" bkimage="png/png/a6.png"/>
+				<Text   text="删除" align="center" />
+			</VerticalLayout>
+
+			<VerticalLayout width="62" height="80" childpadding="3" padding="0,4,0,0">
+				<CButtonLabel	 name="fin_btn" focusbordercolor="0xff9398b5" padding="1,0,0,0" borderround="5,5" bordercolor="0xff9398a5"   width="60" height="60" bkimage="png/png/a21.png"/>
+				<Text   text="查找" align="center"/>
+			</VerticalLayout>
+
+			
+
+			<VerticalLayout width="80" height="80" visible="false">
+				<CButtonLabel  name="cutomize_btn"  focusbordercolor="0xff9398b5" padding="1,0,0,0" borderround="5,5" bordercolor="0xff9398a5" width="60" height="60"  bkimage="png/png/boot_screen.png"/>
+				<Text   padding="5,0,0,0"  autocalcwidth="true"width="80"  text="自解压格式"/>
+			</VerticalLayout>
+		</HorizontalLayout>
+
+		<HorizontalLayout height="50"  bkcolor="0xffd3daed">
+			<HorizontalLayout  width="20" height="20"  padding="10,10,0,0" >
+				<Button name="prev_view_btn"  width="20" height="20" normalimage="file='png/prev_btn.png' source='0,0,20,20'"hotimage="file='png/prev_btn.png' source='20,0,40,20'" pushedimage="file='png/prev_btn.png' source='40,0,60,20'"   />
+			</HorizontalLayout>
+
+			<HorizontalLayout padding="5,3,0,0"  width="1024" height="27" bkcolor="0xffffffff">
+				<Edit name="file_info_edit" float="true"  fonts="2" pos="21,5,0,0"  width="1024" height="25"/>
+				<Label name="file_type_icon_label"  float="true" pos="5,7,0,0" bkimage="png/ToolImg/ico108.png" bkcolor="0xffff0000" width="16" height="16"/>
+			</HorizontalLayout>
+		</HorizontalLayout>
+
+
+		<VerticalLayout  padding="10,0,0,0" width="1240" height="540">
+			<List name="file_list"  bkcolor="0xffffffff" vscrollbar="true"> 
+				<ListHeader name="list_header" height="24" menu="true" bkcolor="0xffbaeefd"> 
+					<ListHeaderItem text="名称" align="right" dragable="false" font="1" width="600" hotimage="file='list_header_hot.png'" pushedimage="file='list_header_pushed.png'" sepimage="file='png/png/splite_line.png'" sepwidth="1"/> 
+					<ListHeaderItem text="大小" align="right" dragable="false" font="1" width="200" hotimage="file='list_header_hot.png'" pushedimage="file='list_header_pushed.png'" sepimage="file='png/png/splite_line.png'" sepwidth="1"/> 
+					<ListHeaderItem text="类型" align="right" dragable="false" font="1" width="200" hotimage="file='list_header_hot.png'" pushedimage="file='list_header_pushed.png'" sepimage="file='png/png/splite_line.png'" sepwidth="1"/> 
+					<ListHeaderItem text="修改时间" align="right" dragable="false" font="1" width="200" hotimage="file='list_header_hot.png'" pushedimage="file='list_header_pushed.png'" sepimage="file='png/png/splite_line.png'" sepwidth="1"/> 
+				</ListHeader>
+			</List>
+		</VerticalLayout>
+
+	</VerticalLayout>
+
+</Window>
