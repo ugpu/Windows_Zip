@@ -18,3 +18,8 @@ Using the DuiLib interface library
 Created in 2016, it can run on win7 - win10 The historical reason only retains the UI structure XML, the source code has left this world with the damn mechanical hard disk
 
 emmmmm.....
+
+
+Images:
+  ![image](https://github.com/ugpu/Windows_Zip/blob/main/example/1.png)<br />
+  ![image](https://github.com/ugpu/Windows_Zip/blob/main/example/2.png)<br />
